@@ -30,12 +30,7 @@
 9. Find a pattern in your solution
     - Checking each variable for the
 10. Make a plan - Write pseudocode
-    # Get weather data from API
-    # Associate weather data with moods
-    # Display mood options to users
-    # Create interface for user (text field + button)
-    # Get user input
-    # Find Mood and return associated weather
+    - Found in app.js
 11. Follow your plan - Write real code
 12. Check your work - Test your code
 

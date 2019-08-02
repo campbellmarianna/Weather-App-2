@@ -1,3 +1,12 @@
+/*
+Plan
+- Create interface for user (text field + button)
+- Get user input
+- Get weather data from API
+- Associate weather data with moods
+- Display mood options to users
+- Find Mood and return associated weather
+*/
 // Required Libraries
 const express = require('express');
 
@@ -5,6 +14,10 @@ const express = require('express');
 const app = express();
 
 // Middleware
+const exphbs = require('express-handlebars');
+
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 // Routes
 app.get('/:username', (req, res) => {
@@ -13,7 +26,8 @@ app.get('/:username', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Hello Person with Mood');
+    console.log(req.query);
+    res.render('home');
 });
 
 // Start Server
